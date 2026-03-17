@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>INFORMATION</title>
+	<!-------------CSS FILE-------------> 
+	<link rel="stylesheet" type="text/css" href="">
+	<!-------------IMPORT FILE-------------> 
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">	
+	<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">	
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+	<!-------------google font-------------> 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+	<!-------------Swiper CSS-------------> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+	body {
+    background-image: url('images/Wallpaper.png'); 
+    background-size: cover; /* Ensures the image covers the entire page */
+    background-position: center center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Makes the background image fixed */
+    margin: 0;
+	font-family: 'Open Sans', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+@font-face {
+      font-family: 'ov cotin Regular'; /* A name for the font */
+      src:url('Font/ov cotin-Regular.otf') format('otf'); /* Fallback for old systems */ 
+    }
+		/* Sidebar styling */
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #003366;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            display: flex;
+            flex-direction: column; /* Align links vertically */
+            justify-content: center; /* Center content vertically */
+            align-items: center; /* Center content horizontally */
+			font-family: 'ov cotin Regular', serif;
+        }
+
+        .sidebar a {
+            padding: 8px 16px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #ffffff;
+            display: block;
+            transition: 0.3s;
+            text-align: center; /* Center text inside each link */
+        }
+
+        .sidebar a:hover {
+            color: #a7a7a7;
+        }
+
+		.container {
+			display: inline-block;
+			cursor: pointer;
+			position: fixed;
+			top: 20px;
+			left: 20px;
+			z-index: 2;
+		}
+
+		.bar1, .bar2, .bar3 {
+			width: 35px;
+			height: 5px;
+			background-color: #003366;
+			margin: 6px 0;
+			transition: 0.4s;
+		}
+
+		.change .bar1 {
+			transform: translate(0, 11px) rotate(-45deg);
+			background-color: #ffffff;
+		}
+
+		.change .bar2 {
+			opacity: 0;
+			background-color: #ffffff;
+		}
+
+		.change .bar3 {
+			transform: translate(0, -11px) rotate(45deg);
+			background-color: #ffffff;
+		}
+
+		#main {
+			flex: 1;
+			padding: 100px 20px;
+		}
+
+		/* Logo styling */
+		.logo-container {
+			position: fixed;
+			top: 20px;
+			right: 20px;
+			z-index: 3;
+		}
+
+		.logo-container img {
+			width: 100px; 
+			height: auto;
+		}
+
+		.payment-table tr:first-child th, 
+        .payment-table tr:first-child td {
+            background-color: #003366; 
+            color: white; 
+        }
+
+		
+
+		/* Information section */
+		.information-section {
+			background-color: #fff;
+			padding: 50px;
+			border-radius: 8px;
+			box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+			max-width: 900px;
+			margin: 20px auto;
+		}
+
+		.information-section h2 {
+			color: #003366;
+			font-size: 32px;
+			text-align: center;
+			margin-bottom: 30px;
+			font-weight: 600;
+			text-transform: uppercase;
+		}
+
+		.info-detail label {
+		font-weight: 600;
+		color: #003366;
+		display: inline-block;
+		margin-top: 10px;
+		}
+
+		.info-detail input[type="date"] {
+		width: 100%;
+		padding: 10px;
+		border: 1px solid #ddd;
+		border-radius: 4px;
+		margin-bottom: 10px;
+		}
+
+
+		.next-buttons {
+			display: flex;
+			justify-content: center;
+			gap: 20px;
+			margin-top: 30px;
+		}
+
+		.next-buttons button {
+			padding: 12px 25px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+
+		.next-buttons .next-btn {
+			background-color: #003366;
+			color: white;
+		}
+
+		.next-buttons .next-btn:hover {
+			background-color: #002244;
+		}
+
+		.next-buttons .back-btn {
+			background-color: #ddd;
+			color: #333;
+		}
+
+		.next-buttons .back-btn:hover {
+			background-color: #ccc;
+		}
+
+		/* Payment Method Section */
+		.information-details {
+			margin-top: 30px;
+		}
+
+		.information-details label {
+			font-weight: 600;
+			color: #003366;
+			display: inline-block;
+			margin-bottom: 10px;
+		}
+
+.information-details > label {
+			font-weight: 600;
+			color: #003366;
+			display: inline-block;
+			margin-bottom: 10px;
+			font-size: 24px; 
+}
+
+.information-details input[type="radio"] {
+	margin-right: 10px;
+}
+.information-details div {
+	margin-bottom: 20px;
+}
+
+.information-details .info-detail select,
+.information-details .details input {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	margin-bottom: 10px;
+}
+.equipment-details {
+    margin-top: 10px;
+}
+/* equipment */
+.equipment-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px; 
+}
+.equipment-item span {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+.equipment-item input[type="number"] {
+    text-align: center;
+    padding: 3px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+	height: 25px;
+    width: 60px;
+}	
+	</style>
+</head>
+<body>
+
+<!-- Logo at the top right -->
+<div class="logo-container">
+  <img src="images/logo.png" alt="Logo">
+</div>
+
+<!--side bar icon -->
+<div class="container" onclick="toggleNav(this)">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div>
+
+<!-- Sidebar -->
+<div id="mySidebar" class="sidebar">
+  <a href="home.html">Home</a>
+  <a href="about.html">About</a>
+</div>
+
+<!-- Main content -->
+<div id="main">
+	<div class="information-section">
+		<h2>Information Details</h2>
+
+		<!-- Information Section -->
+		<div class="information-details">
+			<div>
+				<label for="info-detail">Fill In Your Information Details:</label>
+				<div class="details">
+					<input type="text" id="fullname" placeholder="Fullname" required>
+					<input type="text" id="ic-number" placeholder="IC Number" required>
+					<input type="email" id="email" placeholder="Email" required>
+					<input type="tel" id="phone" placeholder="Phone Number" required>
+					<input type="text" id="address1" placeholder="Address 1" required>
+					<input type="text" id="address2" placeholder="Address 2" required>
+					<input type="text" id="postcode" placeholder="Postcode" required>
+				</div>
+			</div>
+			<div>
+				<div>
+					<label for="info-detail">Hall Booking Details:</label>
+					<div class="info-detail">
+						<select id="hall" required>
+							<option value="" disabled selected>Select Hall</option>
+							<option value="asmaradana">Asmaradana Hall</option>
+							<option value="berseri">Berseri Hall</option>
+							<option value="cahaya">Cahaya Hall</option>
+							<option value="delima">Delima Hall</option>
+						</select>
+						<select id="event-type" required>
+							<option value="" disabled selected>Select an Event Type</option>
+							<option value="wedding">Wedding</option>
+							<option value="conference">Conference</option>
+							<option value="seminar">Seminar</option>
+							<option value="reunion">Reunion</option>
+							<option value="others">Others</option>
+						</select>
+						<!-- Date Picker Fields -->
+						<label for="date-from">Date From:</label>
+						<input type="date" id="date-from" required>
+						<label for="date-to">Date To:</label>
+						<input type="date" id="date-to" required>
+					</div>
+				</div>
+				<div>
+					<label for="equipment-details" style="font-size: 16px;">Additional Equipment:</label>
+					<div class="equipment-details">
+						<div class="equipment-item">
+							<span>Speaker (RM100)</span>
+							<input type="number" id="speaker" name="speaker" placeholder="QTY" min="0" style="width: 60px;">
+						</div>
+						<div class="equipment-item">
+							<span>Microphone (RM50)</span>
+							<input type="number" id="microphone" name="microphone" placeholder="QTY" min="0" style="width: 60px;">
+						</div>
+						<div class="equipment-item">
+							<span>Podium (RM50)</span>
+							<input type="number" id="podium" name="podium" placeholder="QTY" min="0" style="width: 60px;">
+						</div>
+						<div class="equipment-item">
+							<span>Industrial Fan (RM50)</span>
+							<input type="number" id="industrial-fan" name="industrial-fan" placeholder="QTY" min="0" style="width: 60px;">
+						</div>
+						<div class="equipment-item">
+							<span>Stage (RM200)</span>
+							<input type="number" id="stage" name="stage" placeholder="QTY" min="0" style="width: 60px;">
+						</div>
+					</div>
+				</div>
+				<div>
+					<label for="terms" style="font-size: 16px;">Terms and Conditions:</label>
+					<div class="terms-container" style="border: 1px solid #ddd; padding: 10px;  max-height: 150px; overflow-y: auto;">
+						<p style="font-size: 14px; line-height: 1.5;">
+							By booking this hall, you agree to abide by all terms and conditions set forth by Mawar Hall Sdn Bhd. 
+							These include but are not limited to the following: 
+							<br><br>
+							1. Full payment must be made before the event date.<br>
+							2. Any cancellation must be communicated at least 7 days in advance.<br>
+							3. The hall and its equipment must be returned in the same condition.<br>
+							4. Additional charges may apply for overtime or extra cleaning.<br>
+							5. Mawar Hall Sdn Bhd is not liable for personal injuries or property loss.<br><br>
+							Please read the full terms and conditions carefully before proceeding.
+						</p>
+					</div>
+					<div>
+						<input type="checkbox" id="agree" name="agree">
+						<label for="agree" style="font-size: 14px; color: #333;">I agree to the Terms and Conditions</label>
+					</div>
+				</div>
+			</div>
+
+		<!--  Buttons -->
+		<form id="information-form" onsubmit="return validateForm()">
+			<!-- Input fields here -->
+			<div class="next-buttons">
+				<button class="back-btn" type="button" onclick="window.location.href='home.html'">BACK</button>
+				<button class="next-btn" type="submit" id="next-btn"  disabled>NEXT</button>
+			</div>
+		</form>
+		
+		
+			
+	</div>
+</div>
+
+<script>
+// Toggle the sidebar open/close
+function toggleNav(icon) {
+	icon.classList.toggle("change");
+	const sidebar = document.getElementById("mySidebar");
+
+	if (sidebar.style.width === "250px") {
+		closeNav();
+	} else {
+		openNav();
+	}
+}
+function openNav() {
+	document.getElementById("mySidebar").style.width = "250px";
+	document.getElementById("main").style.marginLeft = "250px";
+}
+function closeNav() {
+	document.getElementById("mySidebar").style.width = "0";
+	document.getElementById("main").style.marginLeft = "0";
+}
+const agreeCheckbox = document.getElementById('agree');
+const nextButton = document.getElementById('next-btn');
+
+agreeCheckbox.addEventListener('change', function () {
+    if (this.checked) {
+        nextButton.disabled = false;
+    } else {
+        nextButton.disabled = true;
+    }
+});
+
+function validateForm() {
+    const fields = [
+        { id: "fullname", name: "Fullname" },
+        { id: "ic-number", name: "IC Number" },
+        { id: "email", name: "Email" },
+        { id: "phone", name: "Phone Number" },
+        { id: "address1", name: "Address 1" },
+        { id: "address2", name: "Address 2" },
+        { id: "postcode", name: "Postcode" },
+        { id: "hall", name: "Select Hall" },
+        { id: "event-type", name: "Select an Event Type" },
+        { id: "date-from", name: "Date From" },
+        { id: "date-to", name: "Date To" },
+    ];
+
+    let isValid = true;
+    let message = "Please fill in the following fields:\n";
+
+    fields.forEach((field) => {
+        const element = document.getElementById(field.id);
+        if (!element || !element.value.trim()) {
+            message += `- ${field.name}\n`;
+            isValid = false;
+        }
+    });
+
+    if (!isValid) {
+        alert(message);
+        return false; // Prevent form submission
+    }
+
+    // Redirect to the next page if validation passes
+    window.location.href = "payment.html";
+    return false; // Prevent actual form submission to handle navigation
+}
+
+</script>
+
+</body>
+</html>

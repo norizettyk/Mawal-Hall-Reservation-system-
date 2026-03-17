@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOME</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+     @font-face {
+        font-family: 'ov cotin Regular';
+        src:url('Font/ov cotin-Regular.otf') format('otf'); 
+      }
+      @font-face {
+        font-family: 'Stylish Mother';
+        src: url('Font/Stylish Mother.otf') format('opentype');
+      }
+      @font-face {
+        font-family: 'Kastria';
+        src: url('Font/Kastria-LVVz4.otf') format('opentype');
+      }
+      body {
+        background-image: url('images/BGHALL.png');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: white;
+        text-align: center;
+      }
+      .icon-container {
+        position: absolute;
+        top: 10px;
+        right: 50px;
+        display: flex;
+        gap: 15px;
+      }
+      .icon-container a {
+        text-decoration: none;
+      }
+      .icon-container a i {
+        color: white;
+        font-size: 24px;
+        transition: color 0.3s ease;
+        cursor: pointer;
+      }
+      .icon-container a i:hover {
+        color: #003366;
+      }
+      .content {
+        background: rgba(31, 37, 54, 0.5);
+        padding: 20px 40px;
+        border-radius: 10px;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+
+        /* Animation properties */
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeSlideUp 1s ease-out forwards;
+      }
+      @keyframes fadeSlideUp {
+        0% {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .content h1 {
+        font-size: 30px;
+        margin-bottom: 10px;
+        font-family: 'ov cotin Regular';
+      }
+      .content h2 {
+        font-size: 100px;
+        margin-bottom: 10px;
+        font-family: 'Kastria'
+      }
+      .content h3 {
+        font-size: 40px;
+        margin-bottom: 20px;
+        font-family: 'ov cotin Regular';
+      }
+      .btn-reserve {
+        font-size: 1rem;
+        padding: 10px 20px;
+        background-color: #02264baf;
+        color: white;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0 5px 10px rgba(189, 199, 209, 0.5);
+      }
+      .btn-reserve:hover {
+        background-color: #02264b;
+      }
+  </style>
+</head>
+<body>
+  <div class="icon-container">
+    <a href="https://www.instagram.com" target="_blank" title="Instagram">
+      <i class="ri-instagram-line"></i>
+    </a>
+    <a href="https://www.facebook.com" target="_blank" title="Facebook">
+      <i class="ri-facebook-fill"></i>
+    </a>
+    <a href="https://www.twitter.com" target="_blank" title="Twitter">
+      <i class="ri-twitter-line"></i>
+    </a>
+  </div>
+
+  <div class="content">
+    <h1>WELCOME TO</h1>
+    <h2>Mawar Hall</h2>
+    <h3>Reservation</h3>
+    <button class="btn-reserve" onclick="location.href='home.html'">Explore Now</button>
+  </div>
+</body>
+</html>

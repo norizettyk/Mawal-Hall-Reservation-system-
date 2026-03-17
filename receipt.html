@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RECEIPT</title>
+    
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('images/Wallpaper.png'); 
+            background-size: cover; /* Ensures the image covers the entire page */
+            background-position: center center; /* Centers the background image */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            background-attachment: fixed; /* Makes the background image fixed */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative; /* Add this to position the logo outside */
+        }
+        .receipt-container {
+            width: 600px;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header h2 {
+            margin: 0;
+            font-size: 36px;
+            color: #003366;
+        }
+        .receipt-date {
+            text-align: right;
+            font-size: 14px;
+            color: #555;
+        }
+        .receipt-date p {
+            margin: 5px 0;
+        }
+        .bill-to {
+            font-size: 14px;
+            color: #333;  /* Darker color for the text */
+        }
+        .bill-to p {
+            margin: 5px 0;
+        }
+        .bill-to strong {
+            color: #003366;  /* Dark blue for the labels */
+        }
+        .reservation-dates {
+            font-size: 14px;
+            color: #333;
+        }
+        .reservation-dates p {
+            margin: 5px 0;
+        }
+        .receipt-summary table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 12px 20px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #dad5d5;
+            font-weight: bold;
+        }
+        .total-row td {
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+        button {
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+        /* Print Button */
+        button.print-button {
+            background-color: #003366; /* Dark blue */
+        }
+        button.print-button:hover {
+            background-color: #002244; /* Darker blue */
+        }
+
+        /* Back Button */
+        button.back-button {
+            background-color: #808080; /* Grey */
+        }
+        button.back-button:hover {
+            background-color: #666666; /* Darker grey */
+        }
+
+        /* Logo Position */
+        .logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .logo-img {
+            width: 100px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Logo outside receipt container -->
+<div class="logo">
+    <img src="images/logo.png" alt="Logo" class="logo-img">
+</div>
+
+<div class="receipt-container">
+    <div class="header">
+        <div>
+            <h2>RECEIPT</h2>
+        </div>
+
+        <!-- receipt Date Section -->
+        <div class="receipt-date">
+            <p><strong>23/01/2025</strong></p>
+            <p><strong>02:30 PM</strong></p>
+        </div>
+    </div>
+
+    <!-- Billing Section -->
+    <div class="bill-to">
+        <p><strong>Bill To:</strong></p>
+        <p><strong>Invoice No.:</strong> 342</p>
+        <p><strong>Name:</strong> Aqilah Binti Mat Zali</p>
+        <p><strong>IC:</strong> 030815-04-0298</p>
+        <p><strong>Phone:</strong> 011-58615265</p>
+        <p><strong>Address:</strong> No. 36, Jalan Vista Kirana, 75644, Melaka.</p>
+    </div>
+
+    <!-- Reservation Dates Section -->
+    <div class="reservation-dates" style="display: flex; justify-content: space-between; align-items: flex-start; font-size: 14px; color: #333;">
+        <div>
+            <p><strong>Reservation Dates:</strong></p>
+            <p><strong>Start Date:</strong> 13/08/2025</p>
+            <p><strong>End Date:</strong> 15/08/2025</p>
+            <p><strong>Duration:</strong> 3 Days</p>
+        </div>
+        <div style="text-align: left;">
+            <p><strong>Event Type:</strong> Wedding</p>
+        </div>
+    </div>
+    
+
+    <div class="receipt-summary">
+        <table>
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Quantity</th>
+                    <th>Unit Price</th>
+                    <th>Total Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Berseri Hall (Hall 2)</td>
+                    <td>3 Days</td>
+                    <td>RM2000.00</td>
+                    <td>RM6000.00</td>
+                </tr>
+                <tr>
+                    <td>Speaker</td>
+                    <td>1 Units</td>
+                    <td>RM100.00</td>
+                    <td>RM100.00</td>
+                </tr>
+                <tr>
+                    <td>Microphone</td>
+                    <td>4 Unit</td>
+                    <td>RM50.00</td>
+                    <td>RM200.00</td>
+                </tr>
+                <tr class="total-row">
+                    <td colspan="3"><strong>Total</strong></td>
+                    <td><strong>RM6300.00</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Buttons Section -->
+    <div class="button-container">
+        <button class="back-button" onclick="window.location.href='home.html'">Close</button>
+        <button class="print-button" onclick="window.print()">Print</button>
+    </div>
+</div>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABOUT</title>
+  <link rel="stylesheet" type="text/css" href="C:\Users\User\Documents\INTERN\Web Page\style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'ov cotin Regular';
+      src:url('Font/ov cotin-Regular.otf') format('otf');
+    }
+
+    body {
+      font-family: 'ov cotin Regular', serif;
+      background-color: #f4f1ed;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .main-content {
+      display: flex;
+      flex: 1;
+    }
+
+    .left-section {
+      background-color: #01284f;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      padding: 155PX;
+      position: relative;
+    }
+
+    .left-section h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .left-section p {
+      font-size: 1rem;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .right-section {
+      background-image: url('images/Wallpaper.png');
+      background-size: cover;
+      background-position: center;
+      width: 50%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .logo {
+      width: 300px;
+      height: auto;
+    }
+
+    .cards-container {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 30px;
+      padding: 20px;
+      width: 100%;
+    }
+
+    .card {
+      width: 300px;
+  height: fit-content;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  flex-direction: column;
+  display: flex; /* Add this to enable flexbox */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  padding: 20px; /* Add padding around the content */
+  background-color: #ffffff; /* Optional: Ensure a clean background */
+    }
+
+    .card img {
+      width: 150px;
+  height: 165px; /* Add a fixed height for consistency */
+  object-fit: cover; /* Ensures image scales properly */
+  border-radius: 0; /* Optional: Makes the image circular */
+    }
+
+    .card-body {
+      padding: 10px;
+      background-color: #ffffff;
+      text-align: center;
+    }
+
+    .card-body h5 {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    /* Sidebar styling */
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #003366;
+      overflow-x: hidden;
+      transition: 0.5s;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .sidebar a {
+      padding: 8px 16px;
+      text-decoration: none;
+      font-size: 20px;
+      color: white;
+      display: block;
+      text-align: center;
+    }
+
+    .sidebar a:hover {
+      color: #a7a7a7;
+    }
+
+    .container {
+      cursor: pointer;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 2;
+    }
+
+    .bar1, .bar2, .bar3 {
+      width: 35px;
+      height: 5px;
+      background-color: white;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+
+    .change .bar1 {
+      transform: translate(0, 11px) rotate(-45deg);
+    }
+
+    .change .bar2 {
+      opacity: 0;
+    }
+
+    .change .bar3 {
+      transform: translate(0, -11px) rotate(45deg);
+    }
+    footer {
+  background-color: #003366;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10px;
+  flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Spacing between icon and text */
+}
+
+.contact-icon {
+  font-size: 2rem; /* Adjust icon size */
+  color: white;
+}
+ 
+  </style>
+</head>
+<body>
+
+ 
+
+  <!-- Main content wrapper -->
+  <div class="main-content">
+    <!-- Left section -->
+    <div class="left-section">
+      <h1>Welcome to Mawar Hall</h1>
+      <p style="font-size: 17px;">Mawar Hall Reservation System is your go-to platform for effortless venue booking. Whether you’re planning a wedding, corporate event, party, or conference, we simplify the process of finding the perfect space for your needs. Our platform connects you to a wide selection of verified venues, ranging from elegant banquet halls to modern meeting spaces. With our user-friendly interface, you can easily browse, compare, and book venues that match your style, budget, and requirements, all in one place.  At Mawar Hall Reservation System, we’re committed to making event planning stress-free. Our team ensures quality and reliability with every listing, while our dedicated support staff is here to assist you every step of the way. Finding the right venue is about more than logistics, it’s about creating unforgettable moments. Let us help youset the stage for your next extraordinary event.</p>
+    </div>
+
+   
+
+    <!-- Right section -->
+    <div class="right-section">
+      <div class="logo-container">
+        <img src="images/logo.png" alt="Logo" class="logo">
+      </div>
+    </div>
+  </div>
+
+  <!-- Cards section (placed at the bottom) -->
+  <div class="cards-container">
+    <div class="card">
+      <img src="images/lid.png" alt="Card 1">
+      <div class="card-body">
+        <h5>MAZLIDIYA MAZLAN</h5>
+        <p>Chief Executive Officer</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="images/zet.png" alt="Card 2">
+      <div class="card-body">
+        <h5>NOR IZZETI KHALID</h5>
+        <p>Finance Executive</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="images/zatPic.png" alt="Card 3">
+      <div class="card-body">
+        <h5>NURZATY AQILLA MAT DALI</h5>
+        <p>Senior Markerting</p>
+      </div>
+    </div>
+  </div>
+
+   <!-- Sidebar -->
+   <div id="mySidebar" class="sidebar">
+    <a style="font-size: 25px;" href="home.html">Home</a>
+    <a style="font-size: 25px;" href="about.html">About</a>
+  </div>
+
+  <!-- Hamburger icon -->
+  <div class="container" onclick="toggleNav(this)">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </div>
+
+  <footer>
+    <h1 style="text-align: center;">CONTACT US</h1>
+    <br>
+    <div class="contact-container">
+      <div class="contact-item">
+        <i class="ri-phone-fill contact-icon"></i>
+        <span>011-4266769</span>
+      </div>
+      <div class="contact-item">
+        <i class="ri-mail-line contact-icon"></i>
+        <span>mawarhall@gmail.com</span>
+      </div>
+      <div class="contact-item">
+        <i class="ri-map-pin-2-line contact-icon"></i>
+        <span>Mawar Hall 1/1-2, Kampung Seri Mendapat, 77300 Merlimau, Melaka</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleNav(icon) {
+      icon.classList.toggle("change");
+      const sidebar = document.getElementById("mySidebar");
+
+      if (sidebar.style.width === "250px") {
+        sidebar.style.width = "0";
+      } else {
+        sidebar.style.width = "250px";
+      }
+    }
+  </script>
+</body>
+</html>

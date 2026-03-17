@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HOME</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    
+        @font-face {
+      font-family: 'ov cotin Regular'; /* A name for the font */
+      src:url('Font/ov cotin-Regular.otf') format('otf'); /* Fallback for old systems */ 
+    }
+    body {
+      font-family: 'ov cotin Regular', serif;
+      background-image: url('images/Wallpaper.png'); 
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    #main {
+      padding:100px;
+      overflow-x: hidden;
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #003366;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .sidebar a {
+      padding: 8px 16px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #ffffff;
+      display: block;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      color: #a7a7a7;
+    }
+
+    .container {
+      display: inline-block;
+      cursor: pointer;
+      top: 20px;
+      left: 20px;
+      z-index: 2;
+    }
+
+    .bar1, .bar2, .bar3 {
+      width: 35px;
+      height: 5px;
+      background-color: #003366;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+
+    .change .bar1 {
+      transform: translate(0, 11px) rotate(-45deg);
+      background-color: #ffffff;
+    }
+
+    .change .bar2 {
+      opacity: 0;
+      background-color: #ffffff;
+    }
+
+    .change .bar3 {
+      transform: translate(0, -11px) rotate(45deg);
+      background-color: #ffffff;
+    }
+    .logo-container {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 3;
+    }
+    .logo-container img {
+  cursor: pointer; /* Changes the cursor to indicate it's clickable */
+  width: 100px; /* Adjust the size of the logo */
+}
+
+
+    .logo {
+      width: 100px;
+      height: auto;
+    }
+
+    .card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.542); /* Semi-transparent background */
+  border: none;
+  border-radius: 10px;
+  width: 70%;
+  height: 340px;
+  margin-left: 23%;
+  margin-right: auto;
+  position: relative; /* Ensure child elements can be layered on top */
+  font-size: 20px;
+}
+
+.card-body, .card-img-top, .buttndetail {
+  position: relative;
+  z-index: 1; /* Ensures content appears above the semi-transparent background */
+}
+
+.custom-img {
+  width: 366px;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttndetail {
+  background-color: #003366;
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  width: 366px;
+  margin-top: 0px;
+  z-index: 1;
+  transition: background-color 0.3s ease; /* Smooth transition effect */
+  font-size: 20px;
+}
+.buttndetail:hover {
+  background-color: #004d9a; /* Change button color to purple on hover */
+}
+img{
+  border-radius: 10px;
+}
+.row {
+  margin: 0; /* Reset row margin */
+}
+.col-md-6 {
+  padding: 15px; /* Ensure consistent padding */
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="logo-container">
+    <a href="start.html">
+      <img src="images/logo.png" alt="Logo">
+    </a>
+  </div>
+  
+  <div style=" position: fixed;" class="container" onclick="toggleNav(this)">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </div>
+
+  <div id="mySidebar" class="sidebar">
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+  </div>
+
+  <div id="main">
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card text-center">
+            <div id="carouselAsmaradana" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="images/hall1.jpg" class="d-block w-100 custom-img" alt="Hall 1 Image 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/hall1(1).jpg" class="d-block w-100 custom-img" alt="Hall 1 Image 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/hall1(2).jpg" class="d-block w-100 custom-img" alt="Hall 1 Image 3">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselAsmaradana" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselAsmaradana" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Asmaradana Hall</h5>
+              <p class="card-text">750 Pax</p>
+              <button class="buttndetail btn btn-primary" onclick="location.href='asmaradana.html'">Details</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card text-center">
+            <div id="carouselBerseri" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="images/hall2.jpg" class="d-block w-100 custom-img" alt="Hall 1 Image 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/hall2(1).jpg" class="d-block w-100 custom-img" alt="Hall 1 Image 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/hall2(2).jpg" class="d-block w-100 custom-img" alt="Hall 1 Image 3">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselBerseri" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselBerseri" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Berseri Hall</h5>
+              <p class="card-text">500 Pax</p>
+              <button class="buttndetail btn btn-primary" onclick="location.href='berseri.html'">Details</button>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 70px;">
+          <div class="col-md-6">
+            <div class="card text-center">
+              <div id="carouselCahaya" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="images/hall3(1).jpg" class="d-block w-100 custom-img" alt="Cahaya Hall Image 1">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/hall3(2).jpg" class="d-block w-100 custom-img" alt="Cahaya Hall Image 2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/hall3.jpg" class="d-block w-100 custom-img" alt="Cahaya Hall Image 3">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselCahaya" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselCahaya" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Cahaya Hall</h5>
+                <p class="card-text">250 Pax</p>
+                <button class="buttndetail btn btn-primary" onclick="location.href='cahaya.html'">Details</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card text-center">
+              <div id="carouselDelima" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="images/hall4.webp" class="d-block w-100 custom-img" alt="Delima Hall Image 1">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/hall4(2).jpg" class="d-block w-100 custom-img" alt="Delima Hall Image 2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/hall4(3).png" class="d-block w-100 custom-img" alt="Delima Hall Image 3">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselDelima" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselDelima" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Delima Hall</h5>
+                <p class="card-text">100 Pax</p>
+                <button class="buttndetail btn btn-primary" onclick="location.href='delima.html'">Details</button>
+              </div>
+            </div>
+          </div>
+        </div>       
+    </div>
+  </div>
+
+  <script>
+    function toggleNav(icon) {
+      icon.classList.toggle("change");
+      const sidebar = document.getElementById("mySidebar");
+      if (sidebar.style.width === "250px") {
+        closeNav();
+      } else {
+        openNav();
+      }
+    }
+
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
